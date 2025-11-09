@@ -1,4 +1,4 @@
-# TikTok Bulk Unfollower (v1.337)
+# TikTok Bulk Unfollower (v1.3337)
 
 **Author:** AMMOKNOXX  
 **Description:** A futuristic-styled browser extension to selectively unfollow TikTok accounts you follow. All actions are visible, confirmed, and controlled — no hidden mass automation.
