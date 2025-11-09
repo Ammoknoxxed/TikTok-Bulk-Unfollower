@@ -1,0 +1,64 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TikTok Bulk Unfollower</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="panel">
+    <header class="header">
+      <h1>TikTok Bulk Unfollower</h1>
+      <div class="subtitle">Do what you have to do!</div>
+    </header>
+
+    <section class="controls">
+      <label class="field">Delay between unfollows (ms) - 500 is safe
+        <span class="info" tabindex="0" title="Time the extension waits after each unfollow action before proceeding to the next one. Increase to reduce rate-limit issues.">i
+          <span class="info-text">Time the extension waits after each unfollow action before proceeding to the next one. Increase to reduce rate-limit issues.</span>
+        </span>
+        <input id="delay" type="number" min="50" step="50" value="500" />
+      </label>
+
+      <label class="field">Accounts per batch
+        <span class="info" tabindex="0" title="How many accounts are unfollowed in one quick group before a short pause. Smaller batches are safer.">i
+          <span class="info-text">How many accounts are unfollowed in one quick group before a short pause. Smaller batches are safer.</span>
+        </span>
+        <input id="batchSize" type="number" min="1" step="1" value="1" />
+      </label>
+
+      <label class="field">Max total to unfollow (0 = all)
+        <span class="info" tabindex="0" title="Maximum number of accounts to unfollow in this run. Set 0 to process all visible entries.">i
+          <span class="info-text">Maximum number of accounts to unfollow in this run. Set 0 to process all visible entries.</span>
+        </span>
+        <input id="maxTotal" type="number" min="0" step="1" value="0" />
+      </label>
+
+      <label class="field">Verification attempts per account
+        <span class="info" tabindex="0" title="How many times the script checks whether an unfollow succeeded before marking it as failed.">i
+          <span class="info-text">How many times the script checks whether an unfollow succeeded before marking it as failed.</span>
+        </span>
+        <input id="verifyAttempts" type="number" min="1" step="1" value="3" />
+      </label>
+
+      <div class="buttons">
+        <button id="start" class="btn primary">Start</button>
+        <button id="stop" class="btn danger">Stop</button>
+      </div>
+    </section>
+
+    <section class="log">
+      <div class="log-header">Status</div>
+      <div id="status" class="status">Idle</div>
+    </section>
+
+    <footer class="footer">
+      <small>Stay on the TikTok Follow modal; do not click or scroll the page while running.</small>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
